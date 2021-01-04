@@ -1,5 +1,5 @@
 import React from "react";
-import Ts from "../../Svg/Thunderstorm.svg";
+import Ts from "../../Svg/Sunny.svg";
 import "./Wi.css";
 function Thunderstorm() {
   return (

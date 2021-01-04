@@ -2,19 +2,19 @@
   position: absolute;
   width: auto;
   height: auto;
-  left: 60%;
-  top: 20%;
+  left: 85%;
+  top: 25%;
 }
 .bottom {
   position: absolute;
-  padding-top: 260px;
+  padding-top: 300px;
   padding-bottom: 0%;
   margin: 0%;
   left: 2%;
 }
 .footer {
   position: absolute;
-  padding-top: 515px;
+  padding-top: 560px;
   padding-bottom: 0%;
   margin: 0%;
   left: 5%;

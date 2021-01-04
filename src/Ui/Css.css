@@ -1,23 +1,24 @@
 .parent {
   margin-left: 16px;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .search input {
   position: relative;
   top: 13px;
   margin-left: 0%;
-  width: 90%;
+  width: 120%;
   padding: 2.5%;
   height: 5%;
 }
 .icon {
   position: absolute;
-  top: 25px;
+  top: 20px;
   color: black;
   width: auto;
   height: auto;
-  margin-left: 10px;
+  margin-left: 120%;
 }
 
 .text {
@@ -28,29 +29,26 @@
   position: absolute;
   width: auto;
   height: auto;
-  top: 11%;
-  font-family: "Boogaloo", cursive;
+  top: 15%;
 
   text-transform: uppercase;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 40px;
-  line-height: 109.69%;
   /* or 39px */
+  color: #69004c;
 
-  letter-spacing: 0.045em;
-
-  color: rgb(88, 88, 88);
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .temp {
   position: absolute;
   width: auto;
   height: auto;
-  top: 19%;
+  top: 25%;
   font-style: normal;
-  font-weight: bold;
   font-size: 60px;
+  font-weight: bolder;
 
   color: #ffffff;
 
@@ -62,7 +60,7 @@
   width: auto;
   height: auto;
   left: 115px;
-  top: 29%;
+  top: 36%;
   text-transform: capitalize;
   font-style: italic;
   font-weight: normal;
@@ -71,50 +69,19 @@
 
   color: #69004c;
 }
-.pressure {
-  position: absolute;
-  width: auto;
-  height: auto;
-  left: 12px;
-  top: 61%;
 
-  font-style: italic;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-align: right;
-
-  color: #69004c;
-}
-.feelpressure {
-  position: absolute;
-  width: auto;
-  height: auto;
-  left: 11px;
-  top: 64%;
-
-  font-style: italic;
-  font-weight: 300;
-  font-size: 25px;
-  line-height: 29px;
-  color: #ffffff;
-
-  -webkit-text-stroke: 1px #000000;
-}
 .date {
   position: absolute;
-  left: 29%;
-  top: 42%;
-  width: auto;
+  left: 20%;
+  top: 52%;
+  width: 100%;
   height: auto;
   font-style: normal;
   font-weight: bolder;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
-
+  margin-left: 0%;
   color: #69004c;
 
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -124,7 +91,7 @@
   width: auto;
   height: auto;
   left: 12px;
-  top: 53%;
+  top: 63%;
 
   font-style: italic;
   font-weight: 300;
@@ -141,7 +108,7 @@
   width: auto;
   height: auto;
   left: 11px;
-  top: 56%;
+  top: 67%;
 
   font-style: italic;
   font-size: 30px;
@@ -152,12 +119,44 @@
   -webkit-text-stroke: 1px #000000;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.pressure {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 12px;
+  top: 74%;
+
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: right;
+
+  color: #69004c;
+}
+.feelpressure {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 11px;
+  top: 78%;
+
+  font-style: italic;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 29px;
+  color: #ffffff;
+
+  -webkit-text-stroke: 1px #000000;
+}
 .left {
   position: absolute;
   width: auto;
   height: auto;
   left: 12px;
-  top: 67%;
+  top: 82%;
 
   font-weight: 100;
   font-size: 25px;
@@ -168,10 +167,10 @@
 }
 .right {
   position: absolute;
-  width: auto;
+  width: 100%;
   height: auto;
-  left: 55%;
-  top: 67%;
+  left: 45%;
+  top: 82%;
   margin-left: 10px;
   font-style: normal;
   font-weight: 100;
@@ -181,9 +180,7 @@
 
   color: #69004c;
 }
-.dawn {
-  font-weight: 100;
-}
+
 .bold {
   font-weight: bold;
 }
@@ -208,6 +205,6 @@
   width: auto;
   height: auto;
   left: 3%;
-  top: 95%;
+  top: 117%;
   font-size: 10px;
 }

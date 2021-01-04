@@ -159,3 +159,14 @@ type="text"
 class="form-control"
 aria-label="Dollar amount (with dot and two decimal places)"
 /> */}
+
+function Html() {
+  const weatherIcon = {
+    Thunderstorm: "wi wi-thunderstorm display-1",
+    Drizzle: "wi wi-sleet",
+    Rain: "wi wi-storm-showers",
+    Snow: "wi wi-snow",
+    Atmosphere: "wi wi-fog",
+    Clear: "wi wi-day-sunny",
+    Clouds: "wi wi-day-fog",
+  };

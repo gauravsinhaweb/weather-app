@@ -15,16 +15,6 @@ const inputProps = {
   step: 300,
 };
 function Html() {
-  const weatherIcon = {
-    Thunderstorm: "wi wi-thunderstorm display-1",
-    Drizzle: "wi wi-sleet",
-    Rain: "wi wi-storm-showers",
-    Snow: "wi wi-snow",
-    Atmosphere: "wi wi-fog",
-    Clear: "wi wi-day-sunny",
-    Clouds: "wi wi-day-fog",
-  };
-
   const [location, setLocation] = useState(null);
   const [city, setCity] = useState("New Delhi");
 
@@ -34,8 +24,6 @@ function Html() {
       const response = await fetch(url);
       const resJson = await response.json();
       setLocation(resJson.main);
-
-      console.log(resJson);
     };
     fetchApi();
   }, [city]);
@@ -70,9 +58,7 @@ function Html() {
                 <LocationOnOutlinedIcon />
               </span>
             </div>
-            <div className="temp">
-              <span className="bold">{Math.round(`${location.temp}`)}°C</span>
-            </div>
+            <div className="temp">{Math.round(`${location.temp}`)}°C</div>
             <div>
               <Ts />
             </div>

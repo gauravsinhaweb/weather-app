@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import "./Weather.css";
 function Weather() {
   const [location, setLocation] = useState(null);
   const [city, setCity] = useState("new delhi");

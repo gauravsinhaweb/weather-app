@@ -47,9 +47,6 @@ export default function Geoloc(props) {
                 <div>Feels Like: {feelslike}°C</div>
 
                 <div>
-                  Latitude: {lat}, Longitude: {lon}
-                </div>
-                <div>
                   <button onClick={getCurrentPosition}>Toggle Position</button>
                 </div>
               </div>

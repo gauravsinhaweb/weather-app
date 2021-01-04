@@ -5,12 +5,72 @@ import Footer from "./Wi/Footer";
 import Bottom from "./Wi/Bottom";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Ts from "./Wi/Thunderstorm";
+import Noresult from "./Wi/Noresult";
 
 function Html() {
   const [location, setLocation] = useState(null);
   const [city, setCity] = useState("New Delhi");
   const [country, setCountry] = useState();
+  const [weather, setWeather] = useState();
+  const [sunrise, setSunrise] = useState();
+  const [sunset, setSunset] = useState();
 
+  const srise = sunrise;
+  // Create a new JavaScript Date object based on the timestamp
+  // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+  var date = new Date(srise * 1000);
+  // Hours part from the timestamp
+  var hours = date.getHours();
+  // Minutes part from the timestamp
+  var minutes = "0" + date.getMinutes();
+  // Seconds part from the timestamp
+  var seconds = "0" + date.getSeconds();
+
+  // Will display time in 10:30:23 format
+  var sr = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
+  console.log(sr);
+
+  const sset = sunset;
+  // Create a new JavaScript Date object based on the timestamp
+  // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+  var date = new Date(sset * 1000);
+  // Hours part from the timestamp
+  var hours = date.getHours();
+  // Minutes part from the timestamp
+  var minutes = "0" + date.getMinutes();
+  // Seconds part from the timestamp
+  var seconds = "0" + date.getSeconds();
+
+  // Will display time in 10:30:23 format
+  var ss = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
+  console.log(ss);
+  var d = new Date();
+  var weekday = new Array(7);
+  weekday[0] = "Sun";
+  weekday[1] = "Mon";
+  weekday[2] = "Tues";
+  weekday[3] = "Wedn";
+  weekday[4] = "Thurs";
+  weekday[5] = "Fri";
+  weekday[6] = "Sat";
+  var month = new Array(12);
+  month[0] = "Jan";
+  month[1] = "Feb";
+  month[2] = "Mar";
+  month[3] = "Apr";
+  month[4] = "May";
+  month[5] = "Jun";
+  month[6] = "Jul";
+  month[7] = "Aug";
+  month[8] = "Sep";
+  month[9] = "Oct";
+  month[10] = "Nov";
+  month[11] = "Dec";
+
+  var m = month[d.getUTCMonth()];
+  var n = weekday[d.getDay()];
+  var today = new Date(),
+    date = n + " " + m + " " + today.getDay() + " " + today.getFullYear() + ",";
   useEffect(() => {
     const fetchApi = async () => {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=d686bdf012cea1b3b4050adf53dfdb64`;
@@ -18,12 +78,16 @@ function Html() {
       const resJson = await response.json();
       setLocation(resJson.main);
       setCountry(resJson.sys.country);
+      setWeather(resJson.weather[0].description);
+      setSunrise(resJson.sys.sunrise);
+      setSunset(resJson.sys.sunset);
+      console.log(resJson);
     };
     fetchApi();
   }, [city]);
   return (
     <>
-      <div className="parent">
+      <div>
         <div className="search">
           <input
             value={city}
@@ -38,13 +102,16 @@ function Html() {
           </span>
         </div>
       </div>
-      <Bottom />
 
-      <Footer />
       {!location ? (
-        <p className="nodata">no data found </p>
+        <p className="nodata">
+          <Noresult /> no data found
+        </p>
       ) : (
         <div className="text">
+          <Bottom />
+
+          <Footer />
           <div className="city">
             {city}, {country}
             <span className="pin">
@@ -55,14 +122,13 @@ function Html() {
           <div>
             <Ts />
           </div>
-          <div className="desc">Haze,</div>
+          <div className="desc">{weather},</div>
           <div className="pressure">Pressure:</div>
           <div className="feelpressure">{location.pressure / 100} Pa</div>
 
           <div className="date">
-            Thu Dec 31 2020,
+            {date}
             <br />
-            22:14:28
           </div>
 
           <div className="feelslike">Feels Like: </div>
@@ -70,11 +136,11 @@ function Html() {
 
           <div className="left">
             <span className="dawn">Dawn: </span>
-            <span className="bold">06:00 Hrs</span>
+            <span className="bold">{sr} Hrs</span>
           </div>
           <div className="right">
             <span className="dusk">Dusk:</span>
-            <span className="bold">18:00 Hrs</span>
+            <span className="bold"> {ss} Hrs</span>
           </div>
           <div className="copyright">
             Copyright ©2021 All rights reserved. @GAURAV.SINHA

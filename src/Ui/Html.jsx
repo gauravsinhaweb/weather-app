@@ -9,6 +9,7 @@ import Ts from "./Wi/Thunderstorm";
 function Html() {
   const [location, setLocation] = useState(null);
   const [city, setCity] = useState("New Delhi");
+  const [country, setCountry] = useState();
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -16,6 +17,7 @@ function Html() {
       const response = await fetch(url);
       const resJson = await response.json();
       setLocation(resJson.main);
+      setCountry(resJson.sys.country);
     };
     fetchApi();
   }, [city]);
@@ -44,7 +46,7 @@ function Html() {
       ) : (
         <div className="text">
           <div className="city">
-            {city}, IN
+            {city}, {country}
             <span className="pin">
               <LocationOnOutlinedIcon />
             </span>

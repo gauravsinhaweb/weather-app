@@ -2,7 +2,7 @@
   margin-left: 16px;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
 }
 .search input {
   position: relative;
@@ -18,12 +18,13 @@
   color: black;
   width: auto;
   height: auto;
-  margin-left: 120%;
+  margin-left: 124%;
 }
 
 .text {
   font-size: x-large;
   font-family: "Reem Kufi", sans-serif;
+  padding: 4%;
 }
 .city {
   position: absolute;

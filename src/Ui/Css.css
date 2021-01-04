@@ -4,20 +4,20 @@
   height: auto;
 }
 .search input {
-  position: absolute;
+  position: relative;
   top: 13px;
   margin-left: 0%;
-  width: 80%;
+  width: 90%;
   padding: 2.5%;
   height: 5%;
 }
 .icon {
   position: absolute;
-  top: 13px;
-  left: 85%;
+  top: 25px;
   color: black;
   width: auto;
   height: auto;
+  margin-left: 10px;
 }
 
 .text {
@@ -208,6 +208,6 @@
   width: auto;
   height: auto;
   left: 3%;
-  top: 96%;
+  top: 95%;
   font-size: 10px;
 }

@@ -1,0 +1,213 @@
+.parent {
+  margin-left: 16px;
+  width: auto;
+  height: auto;
+}
+.search input {
+  position: absolute;
+  top: 13px;
+  margin-left: 0%;
+  width: 80%;
+  padding: 2.5%;
+  height: 5%;
+}
+.icon {
+  position: absolute;
+  top: 13px;
+  left: 85%;
+  color: black;
+  width: auto;
+  height: auto;
+}
+
+.text {
+  font-size: x-large;
+  font-family: "Reem Kufi", sans-serif;
+}
+.city {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 11%;
+  font-family: "Boogaloo", cursive;
+
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 109.69%;
+  /* or 39px */
+
+  letter-spacing: 0.045em;
+
+  color: rgb(88, 88, 88);
+}
+
+.temp {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 19%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+
+  color: #ffffff;
+
+  -webkit-text-stroke: 1px #000000;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.desc {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 115px;
+  top: 29%;
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #69004c;
+}
+.pressure {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 12px;
+  top: 61%;
+
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: right;
+
+  color: #69004c;
+}
+.feelpressure {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 11px;
+  top: 64%;
+
+  font-style: italic;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 29px;
+  color: #ffffff;
+
+  -webkit-text-stroke: 1px #000000;
+}
+.date {
+  position: absolute;
+  left: 29%;
+  top: 42%;
+  width: auto;
+  height: auto;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #69004c;
+
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.feelslike {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 12px;
+  top: 53%;
+
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: right;
+
+  color: #69004c;
+}
+.feeltemp {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 11px;
+  top: 56%;
+
+  font-style: italic;
+  font-size: 30px;
+  line-height: 29px;
+  color: #ffffff;
+  font-weight: bolder;
+
+  -webkit-text-stroke: 1px #000000;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.left {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 12px;
+  top: 67%;
+
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #69004c;
+}
+.right {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 55%;
+  top: 67%;
+  margin-left: 10px;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #69004c;
+}
+.dawn {
+  font-weight: 100;
+}
+.bold {
+  font-weight: bold;
+}
+.nodata {
+  text-transform: capitalize;
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  width: auto;
+  height: auto;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #69004c;
+}
+
+.copyright {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 3%;
+  top: 96%;
+  font-size: 10px;
+}

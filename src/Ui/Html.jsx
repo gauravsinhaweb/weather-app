@@ -30,7 +30,7 @@ function Html() {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=d686bdf012cea1b3b4050adf53dfdb64`;
+      const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=d686bdf012cea1b3b4050adf53dfdb64`;
       const response = await fetch(url);
       const resJson = await response.json();
       setLocation(resJson.main);

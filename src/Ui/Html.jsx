@@ -17,9 +17,9 @@ function Html() {
   const [sunrise, setSunrise] = useState();
   const [sunset, setSunset] = useState();
   const [name, setName] = useState();
-  const Mylocation = () => {
-    <Geoloc />;
-  };
+
+  const [lon, setLon] = useState();
+  const [lat, setLat] = useState();
   const srise = sunrise;
   // Create a new JavaScript Date object based on the timestamp
   // multiplied by 1000 so that the argument is in milliseconds, not seconds.
@@ -106,7 +106,7 @@ function Html() {
             placeholder="Search Location"
           />
           <span className="icon">
-            <button onClick={Mylocation}>gps</button>
+            <MyLocationIcon />
           </span>
         </div>
       </div>

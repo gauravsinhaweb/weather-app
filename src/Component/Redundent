@@ -170,3 +170,35 @@ function Html() {
     Clear: "wi wi-day-sunny",
     Clouds: "wi wi-day-fog",
   };
+
+  // const Api = useEffect(() => {
+//   const fetchApi = async () => {
+//     const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=d686bdf012cea1b3b4050adf53dfdb64`;
+//     const res = await fetch(api);
+//     const rep = await res.json();
+//     // setLocation(rep.main);
+//     // setCountry(rep.sys.country);
+//     // setWeather(rep.weather[0].description);
+//     // setSunrise(rep.sys.sunrise);
+//     // setSunset(rep.sys.sunset);
+//     console.log(rep);
+//   };
+//   fetchApi();
+// }, [lat, lon]);
+
+//   <Geolocation
+//   render={({
+//     fetchingPosition,
+//     position: { coords: { latitude, longitude } = {} } = {},
+//     error,
+//     getCurrentPosition,
+//   }) => (
+//     <div>
+//       {error && <div>{error.message}</div>}
+//       <pre>
+//         {setLat(`${latitude}`)}
+//         {setLon(`${longitude}`)}
+//       </pre>
+//     </div>
+//   )}
+// />

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Geolocation from "react-geolocation";
-import "./Weather.css";
 
-export default function Geoloc(props) {
+export default function Geoloc() {
   const [location, setLocation] = useState(null);
   const [name, setName] = useState();
   const [weather, setWeather] = useState();
@@ -21,6 +20,7 @@ export default function Geoloc(props) {
       setWeather(resJson.weather[0].description);
       setCountry(resJson.sys.country);
       setFeelslike(resJson.main.feels_like);
+      console.log(resJson);
     };
     fetchApi();
   }, [lat, lon]);
@@ -35,22 +35,14 @@ export default function Geoloc(props) {
           getCurrentPosition,
         }) => (
           <div>
-            {!location ? (
-              <p>no data found </p>
-            ) : (
+            <div>
+              latitude: {latitude}
               <div>
-                <div class="city">
-                  Location: {name}, {country}
-                </div>
-                <div>Tempreature: {location} °C</div>
-                <div>Atmosphere: {weather}</div>
-                <div>Feels Like: {feelslike}°C</div>
-
-                <div>
-                  <button onClick={getCurrentPosition}>Toggle Position</button>
-                </div>
+                <div>longitude: {longitude}</div>
+                <button onClick={getCurrentPosition}>Toggle Position</button>
               </div>
-            )}
+            </div>
+
             {error && <div>{error.message}</div>}
             <pre>
               {setLat(`${latitude}`)}

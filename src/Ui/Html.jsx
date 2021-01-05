@@ -106,7 +106,7 @@ function Html() {
             placeholder="Search Location"
           />
           <span className="icon">
-            <MyLocationIcon onClick={Mylocation} />
+            <button onClick={Mylocation}>gps</button>
           </span>
         </div>
       </div>

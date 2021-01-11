@@ -14,11 +14,9 @@ export default function App() {
         </Link>
       </span>
       <Switch>
-        <Route exact path="/" component={Geoloc} />
+        <Route exact path="/" component={Html} />
         <Route exact path="/geolocation" component={Geoloc} />
-        <Route exact path="/weather-app/geolocation" component={Geoloc} />
-
-        <Route path="/" component={Geoloc} />
+        <Route path="/" component={Html} />
       </Switch>
     </div>
   );

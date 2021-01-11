@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Css.css";
-import MyLocationIcon from "@material-ui/icons/MyLocation";
 import Footer from "./Wi/Footer";
 import Bottom from "./Wi/Bottom";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Ts from "./Wi/Thunderstorm";
 import Noresult from "./Wi/Noresult";
-import Geolocation from "react-geolocation";
-import Geoloc from "./Wi/Geoloc";
 
 function Html() {
   const [location, setLocation] = useState(null);
@@ -17,9 +14,6 @@ function Html() {
   const [sunrise, setSunrise] = useState();
   const [sunset, setSunset] = useState();
   const [name, setName] = useState();
-
-  const [lon, setLon] = useState();
-  const [lat, setLat] = useState();
   const srise = sunrise;
   // Create a new JavaScript Date object based on the timestamp
   // multiplied by 1000 so that the argument is in milliseconds, not seconds.
@@ -48,34 +42,35 @@ function Html() {
   // Will display time in 10:30:23 format
   var ss = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
 
-  var d = new Date();
-  var weekday = new Array(7);
-  weekday[0] = "Sun";
-  weekday[1] = "Mon";
-  weekday[2] = "Tues";
-  weekday[3] = "Wedn";
-  weekday[4] = "Thurs";
-  weekday[5] = "Fri";
-  weekday[6] = "Sat";
-  var month = new Array(12);
-  month[0] = "Jan";
-  month[1] = "Feb";
-  month[2] = "Mar";
-  month[3] = "Apr";
-  month[4] = "May";
-  month[5] = "Jun";
-  month[6] = "Jul";
-  month[7] = "Aug";
-  month[8] = "Sep";
-  month[9] = "Oct";
-  month[10] = "Nov";
-  month[11] = "Dec";
+  const Months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
-  var m = month[d.getUTCMonth()];
-  var n = weekday[d.getDay()];
+  const Weekdays = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+  var Month = Months[date.getMonth()];
+  var Weekday = Weekdays[date.getDay()];
+
   var today = new Date(),
     date =
-      n + " " + m + " " + today.getDate() + " " + today.getFullYear() + ",";
+      Weekday +
+      " " +
+      Month +
+      " " +
+      today.getDate() +
+      " " +
+      today.getFullYear() +
+      ",";
   const time = today.getHours() + ":" + today.getMinutes();
   const Url = useEffect(() => {
     const fetchUrl = async () => {
@@ -88,7 +83,6 @@ function Html() {
       setSunrise(resJson.sys.sunrise);
       setSunset(resJson.sys.sunset);
       setName(resJson.name);
-      console.log(resJson);
     };
     fetchUrl();
   }, [city]);
@@ -105,9 +99,6 @@ function Html() {
             }}
             placeholder="Search Location"
           />
-          <span className="icon">
-            <MyLocationIcon />
-          </span>
         </div>
       </div>
 

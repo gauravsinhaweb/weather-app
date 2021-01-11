@@ -44,34 +44,35 @@ function Html() {
   // Will display time in 10:30:23 format
   var ss = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
 
-  var d = new Date();
-  var weekday = new Array(7);
-  weekday[0] = "Sun";
-  weekday[1] = "Mon";
-  weekday[2] = "Tues";
-  weekday[3] = "Wedn";
-  weekday[4] = "Thurs";
-  weekday[5] = "Fri";
-  weekday[6] = "Sat";
-  var month = new Array(12);
-  month[0] = "Jan";
-  month[1] = "Feb";
-  month[2] = "Mar";
-  month[3] = "Apr";
-  month[4] = "May";
-  month[5] = "Jun";
-  month[6] = "Jul";
-  month[7] = "Aug";
-  month[8] = "Sep";
-  month[9] = "Oct";
-  month[10] = "Nov";
-  month[11] = "Dec";
+  const Months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
-  var m = month[d.getUTCMonth()];
-  var n = weekday[d.getDay()];
+  const Weekdays = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+  var Month = Months[date.getMonth()];
+  var Weekday = Weekdays[date.getDay()];
+
   var today = new Date(),
     date =
-      n + " " + m + " " + today.getDate() + " " + today.getFullYear() + ",";
+      Weekday +
+      " " +
+      Month +
+      " " +
+      today.getDate() +
+      " " +
+      today.getFullYear() +
+      ",";
   const time = today.getHours() + ":" + today.getMinutes();
   useEffect(() => {
     const fetchUrl = async () => {
@@ -119,32 +120,19 @@ function Html() {
           </span>
         </div>
         <div className="temp">{Math.round(`${location.temp}`)}°C</div>
+
         <div>
-          <Ts />
+          <div>
+            <Ts />
+          </div>
         </div>
         <div className="desc">{weather},</div>
         <div className="pressure">Pressure:</div>
-        <div className="feelpressure">{location.pressure / 100} Pa</div>
 
         <div className="date">
           {date}
           <br />
           {time} Hrs
-        </div>
-
-        <div className="feelslike">Feels Like: </div>
-        <div className="feeltemp">{location.feels_like}°C</div>
-
-        <div className="left">
-          <span className="dawn">Dawn: </span>
-          <span className="bold">{sr} Hrs</span>
-        </div>
-        <div className="right">
-          <span className="dusk">Dusk:</span>
-          <span className="bold"> {ss} Hrs</span>
-        </div>
-        <div className="copyright">
-          Copyright ©2021 All rights reserved. /GAURAV.SINHA
         </div>
       </div>
     </>

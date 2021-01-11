@@ -85,7 +85,6 @@ function Html() {
       setSunrise(resJson.sys.sunrise);
       setSunset(resJson.sys.sunset);
       setName(resJson.name);
-      console.log(resJson);
     };
     fetchUrl();
   }, [lat, lon]);
@@ -119,18 +118,33 @@ function Html() {
             <LocationOnOutlinedIcon />
           </span>
         </div>
+        <div className="temp">{Math.round(`${location.temp}`)}°C</div>
         <div>
-          <div>
-            <Ts />
-          </div>
+          <Ts />
         </div>
         <div className="desc">{weather},</div>
         <div className="pressure">Pressure:</div>
+        <div className="feelpressure">{location.pressure / 100} Pa</div>
 
         <div className="date">
           {date}
           <br />
           {time} Hrs
+        </div>
+
+        <div className="feelslike">Feels Like: </div>
+        <div className="feeltemp">{location.feels_like}°C</div>
+
+        <div className="left">
+          <span className="dawn">Dawn: </span>
+          <span className="bold">{sr} Hrs</span>
+        </div>
+        <div className="right">
+          <span className="dusk">Dusk:</span>
+          <span className="bold"> {ss} Hrs</span>
+        </div>
+        <div className="copyright">
+          Copyright ©2021 All rights reserved. /GAURAV.SINHA
         </div>
       </div>
     </>

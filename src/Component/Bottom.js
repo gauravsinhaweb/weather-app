@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../Svg/bottom.svg";
+import Logo from "../Svg/bottom.svg";
 import "./Wi.css";
 
 function Bottom() {

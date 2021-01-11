@@ -1,5 +1,5 @@
 import React from "react";
-import Result from "../../Svg/noresult.png";
+import Result from "../Svg/noresult.png";
 function Noresult() {
   return (
     <div>

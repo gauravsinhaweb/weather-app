@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../Svg/footer.svg";
+import Logo from "../Svg/footer.svg";
 import "./Wi.css";
 
 function Img() {

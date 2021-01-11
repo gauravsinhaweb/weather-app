@@ -119,8 +119,6 @@ function Html() {
             <LocationOnOutlinedIcon />
           </span>
         </div>
-        <div className="temp">{Math.round(`${location.temp}`)}°C</div>
-
         <div>
           <div>
             <Ts />
